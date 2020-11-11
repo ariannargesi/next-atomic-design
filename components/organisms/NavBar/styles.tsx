@@ -21,12 +21,14 @@ export const ImageWrapper = styled.div`
 `
 
 export const LinkWrapper = styled.div`
-	justify-self: center;
-
+	width: 100%;
 	display: flex;
+	justify-content: space-around;
+	padding: 1rem;
 	& > :not(:first-child) {
 		margin-left: 30px;
-	}
+	};
+
 `
 
 export const ExtraWrapper = styled.div`
