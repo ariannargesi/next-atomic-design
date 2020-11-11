@@ -14,10 +14,7 @@ export const Wrapper = styled.div`
 `
 
 export const Navigation = styled.nav`
-	position: fixed;
-	top: 0;
 	width: 100%;
-	z-index: 999;
 `
 
 export const Header = styled.header<MaxWidthProp>`
@@ -26,8 +23,6 @@ export const Header = styled.header<MaxWidthProp>`
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	margin-bottom: 20px;
-	padding: 20px;
 	${maxWidth};
 `
 
