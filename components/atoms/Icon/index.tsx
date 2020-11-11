@@ -1,0 +1,42 @@
+import styled from 'styled-components'
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
+import { IconName } from '@fortawesome/fontawesome-common-types'
+
+import './fontawesome'
+
+interface IconProps {
+	icon: string
+	size?: string
+	counter?: string | number,
+	pointer?: boolean,
+    onClick?: () => void
+}
+
+const Badge = styled.span`
+	color: white;
+	background: black;
+	width: 22px;
+	padding: 3px 0;
+	display: inline-block;
+	text-align: center;
+	border-radius: 100%;
+	border: 2px solid white;
+    font-size: 12px;
+    position: absolute;
+    right: -13px;
+    top: -11px;
+    `
+
+const Icon: React.FC<IconProps> = (props) => {
+	const iconName = props.icon as IconName
+
+	return (
+		<span style={{ position: 'relative'}}>
+			{/* @ts-ignore */}
+			<FontAwesomeIcon icon={['fas', iconName]} size={props.size} cursor={ props.pointer && 'pointer'} onClick={props.onClick} />
+			{props.counter && <Badge>{props.counter}</Badge>}
+		</span>
+	)
+}
+
+export default Icon
