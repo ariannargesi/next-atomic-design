@@ -11,8 +11,10 @@ export const NavLink = styled.a<LinkProps>`
 	${fontSize};
 	${fontWeight};
 	${lineHeight};
-`
+	padding: 1rem;
+	
 
+`
 export const FooterLink = styled.a<LinkProps>`
 	${fontFamily};
 	${fontSize};
