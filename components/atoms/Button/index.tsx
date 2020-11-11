@@ -1,20 +1,30 @@
-import styled from 'styled-components'
-import { color, fontFamily, fontSize, fontWeight, lineHeight, padding } from 'styled-system'
+import styled, { css, withTheme } from 'styled-components'
+import { borderRadius, variant } from 'styled-system'
 
 export interface ButtonProps {
-	backgroundColor?: String
-	fontFamily?: String
-	fontSize?: number
-	fontWeight?: number
-	padding?: number
+	type?: string
 }
 
-export const Button = styled.button<ButtonProps>`
-	${color};
-	${fontFamily};
-	${fontSize};
-	${fontWeight};
-	${lineHeight};
-	${padding};
-	border-radius: 0.25rem;
-`
+const Button = styled('button')(
+	{
+		padding: '0.5rem',
+	},
+	variant({
+		prop: 'type',
+		variants: {
+			primary: {
+				backgroundColor: 'blue-600',
+				color: 'white'
+			},
+			small: {
+				fontSize: 1,
+				lineHeight: 'body',
+			},
+		},
+	})
+)
+export default Button
+
+// border-radius: 0.25rem;
+// 	border: 2px solid blue-600;
+// 	padding: 8px 1rem;
