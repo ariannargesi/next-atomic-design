@@ -29,6 +29,7 @@
 		"@fortawesome/free-solid-svg-icons": "^5.15.1",
 		"@fortawesome/react-fontawesome": "^0.1.12",
 		"@reduxjs/toolkit": "^1.4.0",
+		"@styled-system/theme-get": "^5.1.2",
 		"atomic-layout": "^0.16.2",
 		"axios": "^0.20.0",
 		"next": "^10.0.0",
