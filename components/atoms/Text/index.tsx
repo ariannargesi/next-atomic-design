@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { color, fontFamily, fontSize, fontWeight, lineHeight } from 'styled-system'
+import { themeGet } from '@styled-system/theme-get'
 
 export interface HeadingProps {
 	fontWeight?: number
@@ -73,4 +74,6 @@ P.defaultProps = {
 
 // Span 
 
-export const Span = styled.span<SpanProps>``
+export const Span = styled.span<SpanProps>`
+	color: ${themeGet('colors.blue-600')}
+`
