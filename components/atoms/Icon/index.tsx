@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled, {withTheme} from 'styled-components'
+import { themeGet } from '@styled-system/theme-get'
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
 import { IconName } from '@fortawesome/fontawesome-common-types'
-
 import './fontawesome'
 
 interface IconProps {
@@ -14,7 +14,8 @@ interface IconProps {
 
 const Badge = styled.span`
 	color: white;
-	background: black;
+	background: ${themeGet('colors.blue-600')};
+	color: white;
 	width: 22px;
 	padding: 3px 0;
 	display: inline-block;
@@ -33,10 +34,11 @@ const Icon: React.FC<IconProps> = (props) => {
 	return (
 		<span style={{ position: 'relative'}}>
 			{/* @ts-ignore */}
-			<FontAwesomeIcon icon={['fas', iconName]} size={props.size} cursor={ props.pointer && 'pointer'} onClick={props.onClick} />
+			<FontAwesomeIcon icon={['fas', iconName]} size={props.size} cursor={ props.pointer && 'pointer'} onClick={props.onClick} color={themeGet('colors.blue-600')(props)} />
 			{props.counter && <Badge>{props.counter}</Badge>}
 		</span>
 	)
 }
 
-export default Icon
+// @ts-ignore
+export default  withTheme(Icon)
