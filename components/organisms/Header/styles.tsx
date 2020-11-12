@@ -13,7 +13,7 @@ export const SearchBarWrapper = styled.div`
 `
 
 export const PhoneNumberWrapper = styled.div`
-	width: 140px;
+	width: 160px;
 	display: flex;
 	justify-content: space-between;
 `
