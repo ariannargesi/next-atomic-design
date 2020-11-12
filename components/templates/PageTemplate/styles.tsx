@@ -8,7 +8,7 @@ interface MaxWidthProp {
 export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding-top: 60px;
+	padding-top: 16px;
 	min-height: 100vh;
 	box-sizing: border-box;
 `
@@ -17,9 +17,10 @@ export const Navigation = styled.nav`
 	width: 100%;
 `
 
-export const Header = styled.header<MaxWidthProp>`
+export const Header = styled.header`
 	align-self: center;
 	display: flex;
+	padding: 0 4rem;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
