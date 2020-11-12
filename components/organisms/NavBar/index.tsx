@@ -10,6 +10,8 @@ const NavBar: FC = () => {
 			<NavLink href='#'>Tab</NavLink>
 			<NavLink href='#'>Tab</NavLink>
 			<NavLink href='#'>Tab</NavLink>
+			<NavLink href='#'>Tab</NavLink>
+			<NavLink href='#'>Tab</NavLink>	
 		</LinkWrapper>
 	)
 }
