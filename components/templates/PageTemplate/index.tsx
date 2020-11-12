@@ -10,7 +10,7 @@ interface PageTemplateProps {
 const PageTemplate: FC<PageTemplateProps> = ({ navigation, header, footer, children }) => {
 	return (
 		<Wrapper>
-			<Header maxWidth={['100%', '100%', 720, 960, 1140]}>{header}</Header>
+			<Header>{header}</Header>
 			<Navigation>{navigation}</Navigation>		
 			<Footer>{footer}</Footer>
 		</Wrapper>
