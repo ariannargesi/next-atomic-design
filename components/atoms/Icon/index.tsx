@@ -9,6 +9,7 @@ interface IconProps {
 	size?: string
 	counter?: string | number,
 	pointer?: boolean,
+	color?: string
     onClick?: () => void
 }
 
@@ -34,11 +35,11 @@ const Icon: React.FC<IconProps> = (props) => {
 	return (
 		<span style={{ position: 'relative'}}>
 			{/* @ts-ignore */}
-			<FontAwesomeIcon icon={['fas', iconName]} size={props.size} cursor={ props.pointer && 'pointer'} onClick={props.onClick} color={themeGet('colors.blue-600')(props)} />
+			<FontAwesomeIcon icon={['fas', iconName]} size={props.size} cursor={ props.pointer && 'pointer'} onClick={props.onClick} color={props.color} />
 			{props.counter && <Badge>{props.counter}</Badge>}
 		</span>
 	)
 }
 
 // @ts-ignore
-export default  withTheme(Icon)
+export default withTheme(Icon)
