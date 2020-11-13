@@ -14,6 +14,5 @@ export const Container = styled.div<ContainerProps>`
 	${color};
 	${padding};
 	background-clip: border-box;
-	border: 1px solid rgba(72, 94, 144, 0.16);
 	border-radius: 0.25rem;
 `
