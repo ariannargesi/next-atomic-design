@@ -12,15 +12,16 @@ export const NavLink = styled.a<LinkProps>`
 	${fontSize};
 	${fontWeight};
 	${lineHeight};
-	display: block;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
 	width: 100%;
-	padding: 1rem;
 	border: 4px solid white;
-	text-align: center;
 	transition: 200ms;
-	backface-visibility: hidden;
 	&:hover {
-		border-bottom: 4px solid ${themeGet('colors.blue-600')}
+		border-bottom: 4px solid ${themeGet('colors.normal')}
 	}
 `
 export const FooterLink = styled.a<LinkProps>`
