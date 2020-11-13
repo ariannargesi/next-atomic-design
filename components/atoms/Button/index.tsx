@@ -13,7 +13,7 @@ const Button = styled('button')(
 		prop: 'type',
 		variants: {
 			primary: {
-				backgroundColor: 'blue-600',
+				backgroundColor: 'normal',
 				color: 'white'
 			},
 			small: {
@@ -24,7 +24,3 @@ const Button = styled('button')(
 	})
 )
 export default Button
-
-// border-radius: 0.25rem;
-// 	border: 2px solid blue-600;
-// 	padding: 8px 1rem;
