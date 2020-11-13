@@ -3,6 +3,7 @@ import { Composition } from 'atomic-layout'
 
 import { Heading, Container } from '../components/atoms'
 import { Header, Navbar, Footer } from '../components/organisms'
+import ProductCard, { Container as ProudctCardContainer } from '../components/molecules/ProductCard'
 import { PageTemplate } from '../components/templates'
 import Head from '../components/Head'
 
@@ -36,24 +37,13 @@ const Home = () => {
 					areasMd={areasTablet}
 					areasLg={areasDesktop}
 					areasXl={areasDesktopWide}
-					gap={10}
 				>
-					{({}) => (
-						<>
-							<Container padding={20}>
-								<Heading.H6 fontSize={11}>CONVERSION RATE</Heading.H6>
-							</Container>
-							<Container padding={20}>
-								<Heading.H6 fontSize={11}>CONVERSION RATE</Heading.H6>
-							</Container>
-							<Container padding={20}>
-								<Heading.H6 fontSize={11}>CONVERSION RATE</Heading.H6>
-							</Container>
-							<Container padding={20}>
-								<Heading.H6 fontSize={11}>CONVERSION RATE</Heading.H6>
-							</Container>
-						</>
-					)}
+					<ProudctCardContainer>
+						<ProductCard>afsd</ProductCard>
+						<ProductCard>afsd</ProductCard> 
+						<ProductCard>afsd</ProductCard>
+						<ProductCard>afsd</ProductCard>
+					</ProudctCardContainer>
 				</Composition>
 			</PageTemplate>
 		</Fragment>
