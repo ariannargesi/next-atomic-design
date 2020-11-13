@@ -13,7 +13,7 @@ export interface ParagraphProps {
 }
 
 export interface SpanProps {
-	fontSize?: number,
+	fontSize?: number
 	lineHeight?: number
 }
 
@@ -46,8 +46,6 @@ const H1 = styled.h1<HeadingProps>`
 	${headingStyles};
 `
 
-
-
 export const Heading = {
 	H1,
 	H2,
@@ -56,6 +54,11 @@ export const Heading = {
 	H5,
 	H6,
 }
+
+export const Span = styled.span<SpanProps>`
+	${fontSize}
+	color: ${themeGet('colors.normal')};
+`
 
 // Paragraph
 export const P = styled.p<ParagraphProps>`
@@ -71,9 +74,4 @@ P.defaultProps = {
 	lineHeight: 1.5,
 }
 
-
-// Span 
-
-export const Span = styled.span<SpanProps>`
-	color: ${themeGet('colors.blue-600')}
-`
+// Span
