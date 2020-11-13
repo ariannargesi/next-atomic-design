@@ -11,7 +11,11 @@ const PageTemplate: FC<PageTemplateProps> = ({ navigation, header, footer, child
 	return (
 		<Wrapper>
 			<Header>{header}</Header>
-			<Navigation>{navigation}</Navigation>		
+			<Navigation>{navigation}</Navigation>
+					
+			<Content>
+			{children}
+			</Content>
 			<Footer>{footer}</Footer>
 		</Wrapper>
 	)

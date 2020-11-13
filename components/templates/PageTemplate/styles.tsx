@@ -8,7 +8,6 @@ interface MaxWidthProp {
 export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding-top: 16px;
 	min-height: 100vh;
 	box-sizing: border-box;
 `
@@ -21,23 +20,26 @@ export const Header = styled.header`
 	align-self: center;
 	display: flex;
 	padding: 0 4rem;
+	height: 64px;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	${maxWidth};
 `
 
-export const Content = styled.section<MaxWidthProp>`
-	width: 100%;
-	padding: 0 20px;
+export const Content = styled.section`
+	display: flex;
+	justify-content: center;
 
 	@media screen and (min-width: 768px) {
-		padding: 0 20px;
-		margin: 0 auto;
 	}
 	${maxWidth};
 `
 
 export const Footer = styled.footer`
 	margin-top: auto;
+`
+export const ProductsContainer = styled.div`
+	max-width: 1140px;
+	height: 40px;
 `
