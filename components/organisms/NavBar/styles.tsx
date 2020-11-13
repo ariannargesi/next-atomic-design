@@ -24,8 +24,7 @@ export const LinkWrapper = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-around;
-	margin-top: 1rem;
-	color: ${themeGet('colors.blue-600')};
+	color: ${themeGet('colors.normal')};
 	border-top: 1px solid ${themeGet('colors.blue-200')};
 	border-bottom: 1px solid ${themeGet('colors.blue-200')};
 	& > * {
